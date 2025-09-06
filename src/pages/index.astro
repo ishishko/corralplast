@@ -6,9 +6,18 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<header>
+<Layout class="container mx-auto">
+	<header class="flex flex-col items-center justify-center ">
 		<h1>CORRALPLAST ENTERPRISES</h1>
-		
 	</header>
+	<body>
+		<main class="flex flex-col items-center justify-center">
+			<card class="card">
+				<h2>Welcome to Corralplast Enterprises</h2>
+				<p>We are a team of experienced and passionate individuals who are dedicated to providing the best services to our clients.</p>
+				<p>Our team of experts is committed to delivering exceptional customer service, ensuring that our clients receive the best possible experience.</p>
+				<p>We are a team of experts who are dedicated to providing the best services to our clients.</p>
+			</card>
+		</main>
+	</body>
 </Layout>
