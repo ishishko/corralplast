@@ -13,7 +13,7 @@ body {
 	height: 300px;
 	width: 100%;
 
-	background-image: url("../../public/corralplast.png");
+	background-image: url("./public/corralplast.png");
 	background-size: cover;
 	background-position: center;
 }
@@ -152,13 +152,13 @@ body {
 }
 
 .card3-1 {
-	background-image: url("../../public/Industria.png");
+	background-image: url("./public/Industria.png");
 }
 .card3-2 {
-	background-image: url("../../public/logistica.png");
+	background-image: url("./public/logistica.png");
 }
 .card3-3 {
-	background-image: url("../../public/desarrollos.png");
+	background-image: url("./public/desarrollos.png");
 }
 .h3 {
 	font-size: 2.5rem;
@@ -193,4 +193,105 @@ body {
 .h3f {
 	font-size: 2rem;
 	color: white;
+}
+
+@media (max-width: 1024px) {
+	.header {
+		width: 100vw; /* La imagen se ajusta al ancho del header */
+		height: 75px;
+	}
+	.container {
+		margin: 0;
+		padding: 0;
+	}
+
+	.h1 {
+		font-size: 2.75rem;
+		top: 5.5rem;
+		max-width: 90%;
+		margin: 0;
+	}
+	.h21 {
+		font-size: 2.25rem;
+		padding-bottom: 1rem;
+		margin: 0 auto;
+	}
+	.h22 {
+		font-size: 1.5rem;
+		padding: 1rem 0;
+		margin: 0 auto;
+	}
+	.h23 {
+		font-size: 1.5rem;
+	}
+	.card1 {
+		width: 100%;
+		padding: 8rem 0 0 0;
+		margin: 0;
+	}
+	.card2 {
+		width: 100%;
+		padding: 2rem 0 0 0;
+		margin: 0;
+	}
+	.p1,
+	.p2 {
+		padding: 0 2rem;
+	}
+	.container2 {
+		padding-top: 5rem;
+	}
+
+	.actividades {
+		justify-content: center; /* Centramos el título de actividades */
+		margin: 0;
+	}
+	.card3 {
+		width: 90%; /* Una sola tarjeta por fila */
+		max-width: 400px; /* Un máximo para que no se estire demasiado */
+		min-height: 25rem;
+		margin: 0;
+	}
+	.h3 {
+		font-size: 2rem;
+	}
+	.p3 {
+		font-size: 1.1rem;
+	}
+
+	.footer {
+		flex-direction: column; /* Apilamos el contenido del footer */
+		text-align: center;
+	}
+	.h2f {
+		font-size: 2rem;
+	}
+	.h3f {
+		font-size: 1.5rem;
+	}
+}
+
+@keyframes pageLoadEffect {
+	/* Del 0% al 50% de la animación (el primer segundo), la altura crece a 100% */
+	0% {
+		height: 0;
+		opacity: 0;
+	}
+	50% {
+		height: 100%;
+		opacity: 0.75; /* La opacidad llega a la mitad */
+	}
+	/* Del 50% al 100% (el segundo segundo), la altura se mantiene y la opacidad termina de aparecer */
+	100% {
+		height: 100%;
+		opacity: 1;
+	}
+}
+
+body {
+	/* Estado inicial antes de la animación */
+	opacity: 0;
+	height: 0;
+
+	animation: pageLoadEffect 2s 1s forwards;
 }
